@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-appivo-bluetooth-transfer" version="1.0.3" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>BluetoothFileTransfer</name>
+<js-module name="BluetoothFileTransfer" src="www/BluetoothFileTransfer.js">
+<clobbers target="cordova.plugins.BluetoothFileTransfer" />
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="BluetoothFileTransfer">
+<param name="android-package" value="btFileTransferIndigo.BluetoothFileTransfer" />
+</feature>
+</config-file>
+<source-file src="src/android/res/xml/opener_paths.xml" target-dir="res/xml" />
+<source-file src="src/android/BluetoothFileTransfer.java" target-dir="src/btFileTransferIndigo/BluetoothFileTransfer" />
+<source-file src="src/android/FileProvider.java" target-dir="src/btFileTransferIndigo/BluetoothFileTransfer" />
+<config-file parent="/*" target="AndroidManifest.xml">
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+</config-file>
+<config-file target="AndroidManifest.xml" parent="/manifest/application">
+<provider android:name="btFileTransferIndigo.FileProvider" android:authorities="${applicationId}.opener.provider" android:exported="false" android:grantUriPermissions="true">
+<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/opener_paths" />
+</provider>
+</config-file>
+<framework src="com.android.support:support-v4:+" />
+</platform>
+</plugin>
