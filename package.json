@@ -1,0 +1,50 @@
+{
+  "_from": "",
+  "_id": "cordova-appivo-bluetooth-transfer@1.0.3",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-appivo-bluetooth-transfer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "",
+    "rawSpec": "",
+    "saveSpec": "",
+    "fetchSpec": "",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "",
+  "_spec": "",
+  "_where": "C:\\Users\\-manutd-\\Scanner",
+  "author": {
+    "name": "Appivo"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-appivo-bluetooth-transfer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Bluetooth File transfer android native",
+  "homepage": "",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "ISC",
+  "name": "cordova-appivo-bluetooth-transfer",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "1.0.3"
+}
